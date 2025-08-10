@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
-from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap
 from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, Email, Length
 
@@ -11,7 +11,7 @@ class MyForm(FlaskForm):
 
 app = Flask(__name__)
 app.secret_key = "kim's booty is fire"
-bootstrap = Bootstrap4(app)
+bootstrap = Bootstrap(app)
 
 @app.route("/")
 def home():
